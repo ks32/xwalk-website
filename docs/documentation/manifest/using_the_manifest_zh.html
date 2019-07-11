@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html id="top">
+  <head>
+    <meta charset="utf-8">
+    <title>The Crosswalk Project</title>
+    <link rel="shorcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <script>
+      WebFontConfig = {
+        custom: {
+          families: ['Clear Sans'],
+          urls: ['/css/fonts.css']
+        },
+        google: {
+          families: ['Source Code Pro:n4,n6']
+        },
+        timeout: 2000
+      };
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script async defer src="//ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js"></script>
+    <link rel="stylesheet" href="/css/main.css">
+
+    <meta name="description" content="Enable the most advanced web innovations with the Crosswalk Project web runtime to develop powerful Android and Cordova apps." />
+    <meta name="author" content="Crosswalk" />
+    <meta name="handheldfriendly" content="true" />
+    <meta name="mobileoptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="cleartype" content="on" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <!-- Facebook -->
+    <meta property="og:side_name" content="Crosswalk" />
+    <meta property="og:title" content="使用manifest文件" />
+    <meta property="og:url" content="http://crosswalk-project.org/documentation/manifest/using_the_manifest_zh" />
+    <meta property="og:description" content="Enable the most advanced web innovations with the Crosswalk Project web runtime to develop powerful Android and Cordova apps." />
+    <meta property="og:image" content="/assets/crosswalk-og-banner.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="http://crosswalk-project.org/documentation/manifest/using_the_manifest_zh" />
+    <meta name="twitter:title" content="使用manifest文件" />
+    <meta name="twitter:description" content="Enable the most advanced web innovations with the Crosswalk Project web runtime to develop powerful Android and Cordova apps." />
+    <meta name="twitter:site" content="@xwalk_project" />
+
+    <!-- Relevant original Crosswalk Project JS -->
+    <script src="/js/utils.js"></script>
+    <script src="/js/xwalk.js"></script>
+    <script src="/js/versions.js"></script>
+    <script src="/js/demos.js"></script>
+    <script src="/js/testimonials.js"></script>
+    <script src="/js/tools.js"></script>
+    <script src="/js/qualityindicators.js"></script>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script language="javascript" type="text/javascript">
+      var style = document.createElement('style');
+      style.type = "text/css";
+      style.id = "antiClickjack";
+      style.innerHTML = "body{display:none !important;}";
+      if (self === top) {
+        var antiClickjack = document.getElementById("antiClickjack");
+        antiClickjack.parentNode.removeChild(antiClickjack);
+      } else {
+        top.location = self.location;
+      }
+    </script>
+
+  </head>
+  <body>
+    <!-- If curr page named 'index' and less than 2 dirs deep,
+         do custom layouts. (home screen, blog, app-mgmt page)
+         Else, provide doc header and nav. -->
+    
+    <div class="container">
+      <div class="doc-header">
+        
+
+
+  <div class="doc-logo-div">
+     <a href="/index_zh.html" class="doc-logo-link">
+       <img src="/assets/identity/crosswalkproject-logo-horizontal-dark.png" class="doc-logo-img">
+     </a>
+  </div>
+  <div class="doc-nav-div">
+    <ul class="doc-nav-list">
+      <li class="doc-nav-item">
+        <a href="/documentation/getting_started_zh.html" class="doc-nav-link">文档</a>
+      </li>
+      <li class="doc-nav-item">
+        <a href="/blog/index_zh.html" class="doc-nav-link">博客</a>
+      </li>
+      <li class="doc-nav-item hide-on-small">
+        <a href="/contribute/index_zh.html" class="doc-nav-link">贡献</a>
+      </li>
+      <li class="doc-nav-item hide-on-small">
+        <a href="https://github.com/crosswalk-project/crosswalk-website/wiki" class="doc-nav-link">维基</a>
+      </li>
+      <li class="doc-nav-item hide-on-small">
+        <a href="/documentation/about/faq_zh.html" class="doc-nav-link">常见问题</a>
+      </li>
+      <li class="doc-nav-item">
+	<span class="i18n-label" id="i18n-label">
+	  <span id="i18n-inner">
+	    <img src="/assets/i18n-globe.png" class="i18n-globe" />
+	    中文版
+	    <img src="/assets/i18n-arrow.png" class="i18n-arrow"/>
+	  </span>
+	  <div id="i18n-menu" class="i18n-menu i18n-menu-light">
+            <a onclick="switchLanguage('English')">English</a>
+            <a onclick="switchLanguage('Chinese')">中文版</a>
+	  </div>
+	</span>
+      </li>
+    </ul>
+  </div>
+  
+
+      </div>
+      <br />
+      <div class="doc-main">
+        <div class="row">
+          
+          <div id="translation-missing-toaster">
+  <p style="padding:10px"> 抱歉，该网页目前还不存在中文版本，请继续浏览其他网页！ </p>
+</div>
+
+          
+
+
+
+<nav id="contents" class="article-toc nav-toggleContainer">
+  <a href="#contents" id="contents-toggle" class="button button--small button--tertiary nav-toggle">Table of Contents</a>
+  <a href="./#contents-toggle" class="button button--small button--tertiary nav-toggle--dummy">Table of Contents</a>
+  <ul class="article-list nav-toggleHide">
+    
+        <li class="article-item ">
+        <a class="article-link" href="/documentation/about_zh.html">关于</a>
+        
+        </li>
+    
+        <li class="article-item ">
+        <a class="article-link" href="/documentation/getting_started_zh.html">开始</a>
+        
+        </li>
+    
+        <li class="article-item ">
+        <a class="article-link" href="/documentation/crosswalk-app-tools_zh.html">Crosswalk App Tools</a>
+        
+        </li>
+    
+        <li class="article-item ">
+        <a class="article-link" href="/documentation/android_zh.html">Android</a>
+        
+        </li>
+    
+        <li class="article-item ">
+        <a class="article-link" href="/documentation/ios_zh.html">iOS</a>
+        
+        </li>
+    
+        <li class="article-item ">
+        <a class="article-link" href="/documentation/windows_zh.html">Windows</a>
+        
+        </li>
+    
+        <li class="article-item ">
+        <a class="article-link" href="/documentation/linux_zh.html">Linux</a>
+        
+        </li>
+    
+        <li class="article-item ">
+        <a class="article-link" href="/documentation/cordova_zh.html">Cordova</a>
+        
+        </li>
+    
+        <li class="article-item ">
+        <a class="article-link" href="/documentation/manifest_zh.html">Manifest</a>
+        
+            <ul class="article-list">
+            
+              <li class="article-item  nav-item--active">
+                <a class="article-link" href="/documentation/manifest/using_the_manifest_zh.html">使用manifest文件</a>
+                
+              </li>
+            
+              <li class="article-item ">
+                <a class="article-link" href="/documentation/manifest/entry_points_zh.html">应用入口点</a>
+                
+              </li>
+            
+              <li class="article-item ">
+                <a class="article-link" href="/documentation/manifest/content_security_policy_zh.html">内容安全策略</a>
+                
+              </li>
+            
+              <li class="article-item ">
+                <a class="article-link" href="/documentation/manifest/display_zh.html">展示</a>
+                
+              </li>
+            
+              <li class="article-item ">
+                <a class="article-link" href="/documentation/manifest/icons_zh.html">图标</a>
+                
+              </li>
+            
+              <li class="article-item ">
+                <a class="article-link" href="/documentation/manifest/launch_screen_zh.html">启动画面</a>
+                
+              </li>
+            
+              <li class="article-item ">
+                <a class="article-link" href="/documentation/manifest/orientation_zh.html">方向</a>
+                
+              </li>
+            
+              <li class="article-item ">
+                <a class="article-link" href="/documentation/manifest/extensions_zh.html">扩展程序</a>
+                
+              </li>
+            
+              <li class="article-item ">
+                <a class="article-link" href="/documentation/manifest/permissions_zh.html">权限</a>
+                
+              </li>
+            
+              <li class="article-item ">
+                <a class="article-link" href="/documentation/manifest/xwalk_hosts_zh.html">xwalk hosts</a>
+                
+              </li>
+            
+              <li class="article-item ">
+                <a class="article-link" href="/documentation/manifest/other_fields_zh.html">其他属性</a>
+                
+              </li>
+            
+            </ul>
+          
+        </li>
+    
+        <li class="article-item ">
+        <a class="article-link" href="/documentation/apis_zh.html">API</a>
+        
+        </li>
+    
+        <li class="article-item ">
+        <a class="article-link" href="/documentation/shared_mode_zh.html">共享模式</a>
+        
+        </li>
+    
+        <li class="article-item ">
+        <a class="article-link" href="/documentation/download_mode_zh.html">下载模式</a>
+        
+        </li>
+    
+        <li class="article-item ">
+        <a class="article-link" href="/documentation/crosswalk_lite_zh.html">Crosswalk Lite</a>
+        
+        </li>
+    
+        <li class="article-item ">
+        <a class="article-link" href="/documentation/samples_zh.html">样例</a>
+        
+        </li>
+    
+        <li class="article-item ">
+        <a class="article-link" href="/documentation/community_zh.html">社区</a>
+        
+        </li>
+    
+        <li class="article-item ">
+        <a class="article-link" href="/documentation/qa_zh.html">质量保证</a>
+        
+        </li>
+    
+  </ul>
+
+</nav>
+
+<article class="article article--hasToC">
+  <h1>使用manifest文件</h1>
+<p>这个页面叙述了在部署Crosswalk应用的时候如何使用<code>manifest.json</code>文件。</p>
+<p>manifest可以通过以下&quot;方式&quot;使用：</p>
+
+<ol>
+<li><a href="#Configure-Android-packaging_zh">配置将Crosswalk应用打包成Android应用</a>.</li>
+<li><a href="#Load-an-application-into-an-embedded-Crosswalk_zh">将一个应用加载到嵌入式Crosswalk运行时</a>.</li>
+</ol>
+<h2 id="Configure-Android-packaging_zh">配置Android打包</h2>
+
+<p>Crosswalk manifest文件可以被用来作为一个应用生成Android包的基础。详情参见<a href="/documentation/getting_started_zh.html">入门指导</a>。</p>
+<p>然而，上述教程只使用了一个基本版的manifest，并没有详细地解释某些manifest字段如何影响Android打包过程。下面的链接提供了关于这些的额外信息：</p>
+<ul>
+<li><p><code>图标</code>: <a href="/documentation/manifest/icons_zh.html#Effect-on-Android-packaging_zh">在Android打包过程中的作用</a></p>
+</li>
+<li><p><code>permissions</code>: <a href="/documentation/manifest/permissions_zh.html#Effect-on-Android-packaging_zh">在Android打包过程中的应用</a>
+注意，在<a href="#Load-an-application-into-an-embedded-Crosswalk_zh">嵌入式Crosswalk中</a>，上述俩个字段在<code>manifest</code>中不会生效。</p>
+</li>
+</ul>
+<h2 id="Load-an-application-into-an-embedded-Crosswalk_zh">加载应用到嵌入模式Crosswalk</h2>
+
+<p><a href="/documentation/apis/embedding_api_zh.html">嵌入式API</a> 使得你可以将Crosswalk运行时环境嵌入到一个Android应用中。<a href="/documentation/embedding_crosswalk_zh.html">嵌入模式Crosswalk指南</a>解释了如何使用embedding API加载一个应用的主HTML文件到嵌入式Crosswalk。</p>
+<p>然而，embedding API也提供了另外一个选择：<a href="/documentation/apis/embedding_api_zh.html">从manifest文件加载应用</a>。比起通过URL加载应用,从manifest文件加载应用的优点是更加灵活。</p>
+<p>例如，如果你决定修改应用的入口点（例如，将<code>index.html</code>改名成<code>home.html</code>），你可以在manifest中修改，而不用去修改任何Java代码。同样，如果新字段对于Crosswalk manifest变得可用，你可以在自己的manifest文件中利用这些字段的优势，而不用去修改任何Java代码。</p>
+<p>为了展示该方法如何工作，可以很容易地遵循<a href="/documentation/embedding_crosswalk_zh.html">嵌入模式API的应用开发指南</a>使用manifest。按照上述指南做完所有步骤，然后按如下内容修改项目：</p>
+<ol>
+<li><p>添加一个<code>manifest.json</code>文件到应用的web根目录（对于教程中使用embedding API的应用，根目录便是<code>assets/</code>目录）：</p>
+<pre><code>{
+    &quot;name&quot;: &quot;XWalkEmbed&quot;,
+    &quot;xwalk_version&quot;: &quot;0.0.1&quot;,
+    &quot;start_url&quot;: &quot;index.html&quot;
+}</code></pre>
+</li>
+<li><p>修改<code>org.crosswalkproject.xwalkembed.MainActivity</code>类（在<code>src/</code>下），它使用<code>loadAppFromManifest()</code>方法而不是<code>load()</code>方法：</p>
+<pre><code>package org.crosswalkproject.xwalkembed;
+
+import org.xwalk.core.XWalkView;
+import android.app.Activity;
+import android.os.Bundle;
+
+public class MainActivity extends Activity {
+    private XWalkView mXWalkView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        mXWalkView = (XWalkView) findViewById(R.id.activity_main);
+
+    // replace this line:
+        //mXWalkView.load(&quot;file:///android_asset/index.html&quot;, null);
+
+    // with this:
+        mXWalkView.loadAppFromManifest(&quot;file:///android_asset/manifest.json&quot;, null);
+    }
+}</code></pre>
+</li>
+</ol>
+<p>当你运行应用时，<code>manifest.json</code>中<code>start_url</code>属性所规定的HTML文件将会被加载。它跟之前被加载的<code>index.html</code>文件相同；但是修改应用时，使用manifest会更加容易，而不用修改Java代码。</p>
+<p>注意，在嵌入式crosswalk模式中，<code>manifest.json</code>中某些被用于打包android应用的字段<em>不</em>会奏效。关于这些字段详见<a href="##Configure-Android-packaging_zh">this section</a>。</p>
+
+  <footer class="article-next">
+    
+
+
+
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+    
+  
+    
+    
+      
+      <a href="/documentation/manifest/entry_points_zh.html" class="article-promo well">
+        <em>下一节关于什么？</em>
+        <h3>应用入口点</h3>
+      </a>
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+
+
+  </footer>
+</article>
+
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+ 
+  <hr class="footer-divider" style="margin-top:125px; margin-bottom:0px" />
+    <div style="position:relative; top:-30px;">
+       <a href="/"><img src="/assets/cw-logo-circle.png" width="60px" style="display:block; margin: 0 auto;" /></a>
+    </div>
+    <footer class="footer footer--documentation" >
+      <div class="container" >
+        <div class="row">
+          <div  class="footer-div" language="en">
+          <img src="/assets/Twitter_logo_blue.png" width="20px" /> Follow  <a href="http://twitter.com/xwalk_project">@xwalk_project on Twitter</a> for the latest developer activities and project updates.
+          </div>
+           <div  class="footer-div" language="zh" style="display:none">
+           <img src="/assets/Sina_Weibo_Blue.png" width="60px" /> 参考<a href="http://weibo.com/crosswalk">微博</a> 最新的开发者活动或者更新。
+          </div>
+          <div class="footer-div">
+             Latest blog post:</br>
+              
+              
+                <b><a href="/blog">Crosswalk 23 to be the last Crosswalk release</a></b><br/>
+                &nbsp;(<span ><time class="js-vagueTime" datetime="Fri, 10 Feb 2017 09:30:00 GMT">2017-02-10T09:30</time></span>)
+              
+              <br/>
+           </div>
+          <div class="footer-div">
+              <strong><a href="/feed.xml"><img src="/assets/rss-icon-16.gif" style="vertical-align:middle" /> RSS Feed</a></strong>
+          </div>
+          <div class="footer-div">
+             <a href="/documentation/getting_started_zh.html"> 文档</a> &nbsp;
+             <a href="/blog/index_zh.html"> 博客</a> &nbsp;
+             <a href="/documentation/downloads_zh.html"> 下载</a> <br />
+             <a href="https://crosswalk-project.org/jira/secure/Dashboard.jspa"> 问题</a> &nbsp;
+             <a href="https://github.com/crosswalk-project"> GitHub资源</a> &nbsp;
+             <a href="/sitemap.html">Sitemap</a> <br/>
+          </div>
+        </div>
+        <div class="row">
+            <small>
+              Crosswalk项目由Intel Open Source Technology Center开发。版权为 © 2013–2016 Intel Corporation。保留所有权利。 <a href="https://github.com/crosswalk-project/crosswalk-website/wiki/Privacy-Policy">  Privacy策略 </a>  *其他名称和商标可能被声明为他人财产
+            </small>
+        </div>
+      </div>
+    </footer>
+<script>
+    $("[language=en]").css("display","none");
+    $("[language=zh]").css("display","block");
+</script>
+
+    
+    
+      <!-- Google Tag Manager -->
+      <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WC843Q"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-WC843Q');</script>
+      <!-- End Google Tag Manager -->
+    
+    <script src="/js/smoothScroll.js"></script>
+    <script src="/js/vagueTime.js"></script>
+    <!-- <script async defer src="/js/trmix.js"></script> -->
+  </body>
+</html>

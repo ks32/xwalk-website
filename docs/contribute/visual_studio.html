@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html id="top">
+  <head>
+    <meta charset="utf-8">
+    <title>The Crosswalk Project</title>
+    <link rel="shorcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <script>
+      WebFontConfig = {
+        custom: {
+          families: ['Clear Sans'],
+          urls: ['/css/fonts.css']
+        },
+        google: {
+          families: ['Source Code Pro:n4,n6']
+        },
+        timeout: 2000
+      };
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script async defer src="//ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js"></script>
+    <link rel="stylesheet" href="/css/main.css">
+
+    <meta name="description" content="Enable the most advanced web innovations with the Crosswalk Project web runtime to develop powerful Android and Cordova apps." />
+    <meta name="author" content="Crosswalk" />
+    <meta name="handheldfriendly" content="true" />
+    <meta name="mobileoptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="cleartype" content="on" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <!-- Facebook -->
+    <meta property="og:side_name" content="Crosswalk" />
+    <meta property="og:title" content="Visual Studio Support" />
+    <meta property="og:url" content="http://crosswalk-project.org/contribute/visual_studio" />
+    <meta property="og:description" content="Enable the most advanced web innovations with the Crosswalk Project web runtime to develop powerful Android and Cordova apps." />
+    <meta property="og:image" content="/assets/crosswalk-og-banner.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="http://crosswalk-project.org/contribute/visual_studio" />
+    <meta name="twitter:title" content="Visual Studio Support" />
+    <meta name="twitter:description" content="Enable the most advanced web innovations with the Crosswalk Project web runtime to develop powerful Android and Cordova apps." />
+    <meta name="twitter:site" content="@xwalk_project" />
+
+    <!-- Relevant original Crosswalk Project JS -->
+    <script src="/js/utils.js"></script>
+    <script src="/js/xwalk.js"></script>
+    <script src="/js/versions.js"></script>
+    <script src="/js/demos.js"></script>
+    <script src="/js/testimonials.js"></script>
+    <script src="/js/tools.js"></script>
+    <script src="/js/qualityindicators.js"></script>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script language="javascript" type="text/javascript">
+      var style = document.createElement('style');
+      style.type = "text/css";
+      style.id = "antiClickjack";
+      style.innerHTML = "body{display:none !important;}";
+      if (self === top) {
+        var antiClickjack = document.getElementById("antiClickjack");
+        antiClickjack.parentNode.removeChild(antiClickjack);
+      } else {
+        top.location = self.location;
+      }
+    </script>
+
+  </head>
+  <body>
+    <!-- If curr page named 'index' and less than 2 dirs deep,
+         do custom layouts. (home screen, blog, app-mgmt page)
+         Else, provide doc header and nav. -->
+    
+    <div class="container">
+      <div class="doc-header">
+        
+
+
+  <div class="doc-logo-div">
+     <a href="/" class="doc-logo-link">
+       <img src="/assets/identity/crosswalkproject-logo-horizontal-dark.png" class="doc-logo-img">
+     </a>
+  </div>
+  <div class="doc-nav-div">
+    <ul class="doc-nav-list">
+      <li class="doc-nav-item">
+        <a href="/documentation/getting_started.html" class="doc-nav-link">Documentation</a>
+      </li>
+      <li class="doc-nav-item">
+        <a href="/blog" class="doc-nav-link">Blog</a>
+      </li>
+      <li class="doc-nav-item hide-on-small">
+        <a href="/contribute" class="doc-nav-link">Contribute</a>
+      </li>
+      <li class="doc-nav-item hide-on-small">
+        <a href="https://github.com/crosswalk-project/crosswalk-website/wiki" class="doc-nav-link">Wiki</a>
+      </li>
+      <li class="doc-nav-item hide-on-small">
+        <a href="/documentation/about/faq.html" class="doc-nav-link">FAQ</a>
+      </li>
+      <li class="doc-nav-item">
+	<span class="i18n-label" id="i18n-label">
+	  <span id="i18n-inner">
+	    <img src="/assets/i18n-globe.png" class="i18n-globe" />
+	    English
+	    <img src="/assets/i18n-arrow.png" class="i18n-arrow"/>
+	  </span>
+	  <div id="i18n-menu" class="i18n-menu i18n-menu-light">
+            <a onclick="switchLanguage('English')">English</a>
+            <a onclick="switchLanguage('Chinese')">中文版</a>
+	  </div>
+	</span>
+      </li>
+    </ul>
+  </div>
+  
+
+      </div>
+      <br />
+      <div class="doc-main">
+        <div class="row">
+          
+          <div id="translation-missing-toaster">
+  <p style="padding:10px"> 抱歉，该网页目前还不存在中文版本，请继续浏览其他网页！ </p>
+</div>
+
+          
+
+
+
+<nav id="contents" class="article-toc nav-toggleContainer">
+  <a href="#contents" id="contents-toggle" class="button button--small button--tertiary nav-toggle">Table of Contents</a>
+  <a href="./#contents-toggle" class="button button--small button--tertiary nav-toggle--dummy">Table of Contents</a>
+  <ul class="article-list nav-toggleHide">
+    
+        <li class="article-item ">
+        <a class="article-link" href="/contribute/.html">Overview</a>
+        
+        </li>
+    
+        <li class="article-item ">
+        <a class="article-link" href="/contribute/building_crosswalk.html">Building Crosswalk</a>
+        
+        </li>
+    
+        <li class="article-item ">
+        <a class="article-link" href="/contribute/contributing-code.html">Contributing code</a>
+        
+        </li>
+    
+        <li class="article-item ">
+        <a class="article-link" href="/contribute/contributing_tests.html">Contributing test</a>
+        
+        </li>
+    
+        <li class="article-item ">
+        <a class="article-link" href="/contribute/coding_style.html">Coding style</a>
+        
+        </li>
+    
+        <li class="article-item  nav-item--active">
+        <a class="article-link" href="/contribute/visual_studio.html">Visual Studio Support</a>
+        
+        </li>
+    
+        <li class="article-item ">
+        <a class="article-link" href="/contribute/downstream-chromium.html">Downstream Chromium</a>
+        
+        </li>
+    
+        <li class="article-item ">
+        <a class="article-link" href="/contribute/reviewer_policy.html">Reviewer policy</a>
+        
+        </li>
+    
+        <li class="article-item ">
+        <a class="article-link" href="/contribute/report_bugs.html">Report bugs</a>
+        
+        </li>
+    
+  </ul>
+
+</nav>
+
+<article class="article article--hasToC">
+  <h1>Developing Crosswalk on Windows with Microsoft Visual Studio</h1>
+<p>It is possible to use Visual Studio IDE to develop, debug and run Crosswalk. Visual Studio can provide great features to make it easier to contribute such as code completion, advanced debugger and so forth. However Crosswalk is a pretty big project with a rather big codebase and Visual Studio can require a lot of RAM to operate (~1.2Gb).</p>
+<h2>Getting started with Visual Studio</h2>
+<ol>
+<li><p>Go to Tools -&gt; Options. Open &quot;Projects and Solutions&quot; and then &quot;Build and Run&quot;. In the new screen, enter 1 as the number of parallel project builds. This is because the integration of <a href="https://chromium.googlesource.com/chromium/src/+/master/docs/ninja_build.md">Ninja</a> with MSVS doesn&#39;t support concurrent builds. However that doesn&#39;t mean there can&#39;t be multiple compilation jobs. Each target will be built one by one (e.g. <code>base/</code> then <code>content/</code>) but multiple jobs will be created to build the various files. At the end of the day your CPU cores will be fully utilized.</p>
+</li>
+<li><p>Go to File -&gt; Open -&gt; Project/Solution. Navigate to <code>crosswalk-src/src/xwalk/</code> and open <code>xwalk.sln</code>. You can open another project such as <code>content/content_shell.vcxproj</code> if you want to build <code>content_shell</code> only. If <code>xwalk.sln</code> is missing make sure that you correctly set the <code>GYP_GENERATORS</code> (See <a href="/contribute/building_crosswalk.html">Building Section</a>.</p>
+</li>
+<li><p>MSVS will open and parse all dependencies. Now you are ready to go. It&#39;s going to take a while to first parse and then load all the solutions. Parsing is done once, then it&#39;s incremental.</p>
+</li>
+<li><p>In the Build menu you can select whether you want to build in Release or Debug mode by going into the &quot;Configuration Manager&quot; and selecting the desired &quot;Active Solution configuration&quot;. Then &quot;Build&quot; -&gt; &quot;Build Solution&quot; and then wait. Alternatively you can also select a target (for example, <code>xwalk</code> or <code>xwalk_builder</code>) in the Solution Explorer and build only that one.</p>
+</li>
+<li><p><code>xwalk.exe</code> executable should be in <code>crosswalk-src/src/out/Release</code> or <code>crosswalk-src/src/out/Debug</code>.</p>
+</li>
+</ol>
+<h2>Running and debugging inside Visual Studio</h2>
+<ol>
+<li><p>In the Solution Explorer (right-hand side panel) you can click on which target you want to debug. Say you want to debug <code>xwalk</code>, you can right click on it and select &quot;Set as startup project.&quot; Make sure you built in Debug otherwise breakpoints are not going to be resolved.</p>
+</li>
+<li><p>Now you need to pass the right arguments to the Crosswalk executable so it can load a page/application. In the Debug menu, select &quot;xwalk properties&quot; (or mytarget properties), then in the new window, navigate to &quot;Configuration Properties&quot; then &quot;Debugging&quot;.  In the &quot;Command Arguments&quot; specify what you want to pass. Click OK.</p>
+</li>
+</ol>
+<p><a href="/assets/win-10-visual-studio-debug.png"><img src="/assets/win-10-visual-studio-debug.png" style="display: block; margin: 0 auto"/></a></p>
+<ol>
+<li>If you press F5 or click &quot;Debug&quot; -&gt; &quot;Start Debugging&quot; it will launch xwalk with a debugger attached. Note that it&#39;s attaching to the Browser Process. If you want to attach to the Render Process, click &quot;Attach to Process&quot; in the Debug menu and pick the right process. You can add breakpoints by clicking in the editor and look up variables and so forth. Very convenient.</li>
+</ol>
+<p><a href="/assets/win-10-visual-studio-debug2.png"><img src="/assets/win-10-visual-studio-debug2.png" style="display: block; margin: 0 auto"/></a></p>
+<h2>Getting the most out of Visual Studio</h2>
+<p>A few tips on getting the most out of building with Visual Studio:</p>
+<ul>
+<li><p>As Chromium is big, Visual Studio spends a lot of time opening the xwalk project and parsing a lot of stuff that, in most cases, you don&#39;t need (e.g. all the third_party code). Fortunately there is a plugin that enables filtering what gets loaded. Download and install <a href="https://visualstudiogallery.msdn.microsoft.com/5396fa4a-d638-471b-ac3d-671ccd2ea369">Funnel</a>. Now everytime the xwalk project is opened you can choose whether to partially load the project and you can select what to load (e.g. <code>base/</code>, <code>content/</code>, or <code>third_party/WebKit</code>). Once you setup your filter, Funnel remembers it. It makes loading the entire solution much faster and lowers the memory usage while keeping all the benefits of using an IDE in the first place.</p>
+</li>
+<li><p>Make sure to install the <code>Microsoft Web Essentials</code> so you get extra features when editing the HTML/JS/CSS files.</p>
+</li>
+<li><p>Visual Studio has a &quot;feature&quot; to try and build as much as it can even if an error occurrs. Sometimes you don&#39;t want to wait for the compilation to finish to get a nice way to jump to the error. You can download the <a href="https://visualstudiogallery.msdn.microsoft.com/91aaa139-5d3c-43a7-b39f-369196a84fa5">StopOnFirstBuildError extension</a> to stop the build at the first error (something like -V1 of ninja).</p>
+</li>
+<li><p>If you want to automatically attach the debugger for all the xwalk processes (browser process, render process, ...) please use <a href="https://visualstudiogallery.msdn.microsoft.com/a1141bff-463f-465f-9b6d-d29b7b503d7a">Microsoft Child Process Debbugging Power Tool</a>.</p>
+</li>
+<li><p>If you want to speed up link time, you can set <code>GYP_DEFINES = component=shared_library</code>. This will create DLLs for each of the crosswalk subprojects and avoid linking xwalk.exe with all the subprojects in it. </p>
+</li>
+</ul>
+
+  <footer class="article-next">
+    
+
+
+
+
+  </footer>
+</article>
+
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+ 
+  <hr class="footer-divider" style="margin-top:125px; margin-bottom:0px" />
+    <div style="position:relative; top:-30px;">
+       <a href="/"><img src="/assets/cw-logo-circle.png" width="60px" style="display:block; margin: 0 auto;" /></a>
+    </div>
+    <footer class="footer footer--documentation" >
+      <div class="container" >
+        <div class="row">
+          <div  class="footer-div" language="en">
+          <img src="/assets/Twitter_logo_blue.png" width="20px" /> Follow  <a href="http://twitter.com/xwalk_project">@xwalk_project on Twitter</a> for the latest developer activities and project updates.
+          </div>
+           <div  class="footer-div" language="zh" style="display:none">
+           <img src="/assets/Sina_Weibo_Blue.png" width="60px" /> 参考<a href="http://weibo.com/crosswalk">微博</a> 最新的开发者活动或者更新。
+          </div>
+          <div class="footer-div">
+             Latest blog post:</br>
+              
+              
+                <b><a href="/blog">Crosswalk 23 to be the last Crosswalk release</a></b><br/>
+                &nbsp;(<span ><time class="js-vagueTime" datetime="Fri, 10 Feb 2017 09:30:00 GMT">2017-02-10T09:30</time></span>)
+              
+              <br/>
+           </div>
+          <div class="footer-div">
+              <strong><a href="/feed.xml"><img src="/assets/rss-icon-16.gif" style="vertical-align:middle" /> RSS Feed</a></strong>
+          </div>
+          <div class="footer-div">
+             <a href="/documentation/getting_started.html"> Documentation</a> &nbsp;
+             <a href="/blog"> Blog</a> &nbsp;
+             <a href="/documentation/downloads.html"> Downloads</a> <br />
+             <a href="https://crosswalk-project.org/jira/secure/Dashboard.jspa"> Issues</a> &nbsp;
+             <a href="https://github.com/crosswalk-project"> GitHub Source</a> &nbsp;
+             <a href="/sitemap.html">Sitemap</a> <br/>
+          </div>
+        </div>
+        <div class="row">
+            <small>
+              The Crosswalk Project was created by the Intel Open Source Technology Center. Copyright © 2013–2016 Intel Corporation. All right reserved. <a href="https://github.com/crosswalk-project/crosswalk-website/wiki/Privacy-Policy">  Privacy policy </a>  *Other names and brands may be claimed as the property of others.
+            </small>
+        </div>
+      </div>
+    </footer>
+<script>
+    $("[language=en]").css("display","none");
+    $("[language=en]").css("display","block");
+</script>
+
+    
+    
+      <!-- Google Tag Manager -->
+      <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WC843Q"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-WC843Q');</script>
+      <!-- End Google Tag Manager -->
+    
+    <script src="/js/smoothScroll.js"></script>
+    <script src="/js/vagueTime.js"></script>
+    <!-- <script async defer src="/js/trmix.js"></script> -->
+  </body>
+</html>
