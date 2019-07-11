@@ -9,7 +9,7 @@
       WebFontConfig = {
         custom: {
           families: ['Clear Sans'],
-          urls: ['/css/fonts.css']
+          urls: ['../css/fonts.css']
         },
         google: {
           families: ['Source Code Pro:n4,n6']

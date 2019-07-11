@@ -39,7 +39,7 @@ $(document).ready(function () {
     // If no data received, no apps will display
     function initAppList() {
 	$.ajax ( {
-	    url: '/documentation/community/apps/app-fetch.php',
+	    url: '../documentation/community/apps/app-fetch.php',
 	    type: 'GET',
 	    success: function (data) {
 		dbRows = JSON.parse(data);

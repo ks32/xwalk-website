@@ -15,7 +15,7 @@ function createTestimonialHtml (item) {
         "<div class='t-cube' id='t-cube" + item.index + "'>" + 
           (item.faceLink ? "<a href='" + item.faceLink + "'>" : "") +  
           "<img class='t-img' id='t-img" + item.index + "'" + 
-              "src='/assets/testimonials/" + item.faceImg + "'/>" + 
+              "src='../assets/testimonials/" + item.faceImg + "'/>" + 
           (item.faceLink ? "</a>" : "") + "<br>" +
         "<div id='t-label" + item.index + "'>" + 
           "<strong>" + item.name + "</strong><br>" +
@@ -23,7 +23,7 @@ function createTestimonialHtml (item) {
           (item.title ? item.title + "<br>" : "") + 
           (item.link ? "<a href='" + item.link + "'>" : "") +  
           (item.company ? item.company + "<br>" : "") + 
-          (item.companyLogo ? "<img class='t-logo' src='/assets/testimonials/" + item.companyLogo + "'/>" : "") + 
+          (item.companyLogo ? "<img class='t-logo' src='../assets/testimonials/" + item.companyLogo + "'/>" : "") + 
           (item.link ? "</a>" : "") + 
           "</div>" + 
         "</div></div>" + 

@@ -47,7 +47,7 @@ function createHtmlFromItem (item, pageType, itemWidth) {
         "<div class='tool-cube' id='cube" + item.index + "'>" + 
           (item.link ? "<a href='" + item.link + "'>" : "") + 
           "<img class='tool-img' id='appImg" + item.index + "'" + 
-            "src='/assets/tools/" + item.appImg + "'/>" + 
+            "src='../assets/tools/" + item.appImg + "'/>" + 
           (item.link ? "</a>" : "") + 
           "<div class='tool-text'>" + 
             "<div class='tool-label'>" + item.name + "</div>" +
@@ -60,7 +60,7 @@ function createHtmlFromItem (item, pageType, itemWidth) {
     } else if (pageType === HOME_PAGE) {
         content = 
         "<div class='tools-hp-cube' style='width:" + itemWidth + "%;' >" + 
-          "<a href='/documentation/community/tools.html?tool=" + item.index + "'>" + 
+          "<a href='../documentation/community/tools.html?tool=" + item.index + "'>" + 
             "<img class='tools-hp-img' id='hp-img" + item.index + "' src='assets/tools/" + item.appImg + "' />" + 
           "</a>" + 
           //"<div class='tools-hp-label'>" + item.name + "</div>" + 
