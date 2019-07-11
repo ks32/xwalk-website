@@ -24,8 +24,8 @@ function onLoadDemoPage() {
 
             webclPlaying = true;
         } else {
-            $("#webcl1-div").html ("<img class='demo-img-webcl' id='webcl1' src='../assets/demo-webcl1.jpg' />");
-            $("#webcl2-div").html ("<img class='demo-img-webcl' id='webcl2' src='../assets/demo-webcl2.jpg' />");
+            $("#webcl1-div").html ("<img class='demo-img-webcl' id='webcl1' src='./assets/demo-webcl1.jpg' />");
+            $("#webcl2-div").html ("<img class='demo-img-webcl' id='webcl2' src='./assets/demo-webcl2.jpg' />");
 
             $("#webcl-play-btn").removeClass("demo-stop-btn");
             $("#webcl-play-btn").addClass("demo-play-btn");
@@ -44,8 +44,8 @@ function onLoadDemoPage() {
 
             simdPlaying = true;
         } else {
-            $("#simd1-div").html ("<img class='demo-img-simd id='simd1' src='../assets/demo-simd1.jpg' />");
-            $("#simd2-div").html ("<img class='demo-img-simd id='simd2' src='../assets/demo-simd2.jpg' />");
+            $("#simd1-div").html ("<img class='demo-img-simd id='simd1' src='./assets/demo-simd1.jpg' />");
+            $("#simd2-div").html ("<img class='demo-img-simd id='simd2' src='./assets/demo-simd2.jpg' />");
 
             $("#simd-play-btn").removeClass("demo-stop-btn");
             $("#simd-play-btn").addClass("demo-play-btn");

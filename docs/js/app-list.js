@@ -8,7 +8,7 @@ var appSearchArray = null;
 <div class='appCube' id='cube0'>
   <div class='appLabel'>Tiny Flashlight LED</div>
   <a href='https://play.google.com/store/apps/details?id=com.devuni.flashlight&hl=en'>
-    <img class='appImg' id='appImg0' src='../assets/apps/tiny-flashlight-led84.jpg'/>
+    <img class='appImg' id='appImg0' src='./assets/apps/tiny-flashlight-led84.jpg'/>
   </a>
   <div class='appDetailLabel'>
     <a href='https://www.intel.com'>
@@ -31,9 +31,9 @@ function printResultDiv (row) {
         "  <div class='appLabel'>" + row.name + "</div>\n" +
         (hasStoreUrl ? 
             "  <a href='" + row.storeUrl + "'>\n" + 
-            "    <img class='appImg' src='../assets/apps/icons/" + row.image + "'/>\n" +
+            "    <img class='appImg' src='./assets/apps/icons/" + row.image + "'/>\n" +
             "  </a>\n"
-        :   "  <img class='appImgNoLink' src='../assets/apps/icons/" + row.image + "'/>\n") +
+        :   "  <img class='appImgNoLink' src='./assets/apps/icons/" + row.image + "'/>\n") +
 
         "  <div class='appDetailLabel'>\n" + 
         (hasAuthorUrl ? 

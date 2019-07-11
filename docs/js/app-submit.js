@@ -32,7 +32,7 @@ function onImgSelect(input) {
     // Check file size!/Full file API support.
     var fileApiSupported = (window.FileReader && window.File && window.FileList && window.Blob);
     if (!fileApiSupported) {
-        $('#pvwImg').attr('src', "/assets/apps/no-file-api.jpg");
+        $('#pvwImg').attr('src', "./assets/apps/no-file-api.jpg");
         goodImage = true;  //just guess since we can't get more details
         return;
     }
@@ -116,7 +116,7 @@ function loadAppFormValues() {
     $('#storeUrl').val (app.storeUrl);
     $('#name').val (app.name);
 
-    $('#pvwImg').attr('src', '../assets/apps/icons/' + app.image);
+    $('#pvwImg').attr('src', './assets/apps/icons/' + app.image);
     $('#oldImage').val (app.image);         //set hidden form value so image is not rqd
     $('#imageFile').removeAttr('required'); //not required to click "Browse".
 

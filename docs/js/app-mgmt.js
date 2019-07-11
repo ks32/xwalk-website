@@ -19,7 +19,7 @@ var colLabels = ["ID","Status","Name","Email","Submit Date","Author","Publish Da
 function setPreviewValues (row) {
     if (row) {
         $('#pvwLabel').text (row.name);
-        $('#pvwImg').attr("src", "/assets/apps/icons/" + row.image);
+        $('#pvwImg').attr("src", "./assets/apps/icons/" + row.image);
         if (row.storeUrl) {
             $('#pvwImg').attr("title", row.storeUrl);
             $('#pvwImg').switchClass("appImgNoLink", "appImg", 0);
@@ -205,7 +205,7 @@ $(document).ready (function () {
 
 //------------------------------------------------
 function onEditBtn() {
-    window.open("/documentation/community/apps/app-submit.php?id=" + selRow.emailToken, "_self");
+    window.open("./documentation/community/apps/app-submit.php?id=" + selRow.emailToken, "_self");
 }
 
 function onEmailBtn() {

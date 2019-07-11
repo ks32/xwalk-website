@@ -15,7 +15,7 @@ $(document).ready(function () {
     var waitTime = 12000;
     var spinTime = 3000;
     var fadeTime = 1000;
-    var imgDir = "/assets/apps/icons/";
+    var imgDir = "./assets/apps/icons/";
     var isPageVisible = true;  //assume when document ready, we are visible
     var isIE = detectIEBrowser();
 
@@ -39,7 +39,7 @@ $(document).ready(function () {
     // If no data received, no apps will display
     function initAppList() {
 	$.ajax ( {
-	    url: '../documentation/community/apps/app-fetch.php',
+	    url: '/documentation/community/apps/app-fetch.php',
 	    type: 'GET',
 	    success: function (data) {
 		dbRows = JSON.parse(data);

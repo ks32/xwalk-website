@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>The Crosswalk Project</title>
-    <link rel="shorcut icon" href="/assets/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <link rel="shorcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
     <script>
       WebFontConfig = {
         custom: {
           families: ['Clear Sans'],
-          urls: ['../css/fonts.css']
+          urls: ['./css/fonts.css']
         },
         google: {
           families: ['Source Code Pro:n4,n6']
@@ -19,7 +19,7 @@
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script async defer src="//ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js"></script>
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="./css/main.css">
 
     <meta name="description" content="Enable the most advanced web innovations with the Crosswalk Project web runtime to develop powerful Android and Cordova apps." />
     <meta name="author" content="Crosswalk" />
@@ -34,7 +34,7 @@
     <meta property="og:title" content="Crosswalk Project 15 Beta: Chromium 44, Android 4.0 support, migrating local storage from WebView, and more" />
     <meta property="og:url" content="http://crosswalk-project.org/blog/crosswalk-15-beta" />
     <meta property="og:description" content="Enable the most advanced web innovations with the Crosswalk Project web runtime to develop powerful Android and Cordova apps." />
-    <meta property="og:image" content="/assets/crosswalk-og-banner.jpg" />
+    <meta property="og:image" content="./assets/crosswalk-og-banner.jpg" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
@@ -44,15 +44,15 @@
     <meta name="twitter:site" content="@xwalk_project" />
 
     <!-- Relevant original Crosswalk Project JS -->
-    <script src="/js/utils.js"></script>
-    <script src="/js/xwalk.js"></script>
-    <script src="/js/versions.js"></script>
-    <script src="/js/demos.js"></script>
-    <script src="/js/testimonials.js"></script>
-    <script src="/js/tools.js"></script>
-    <script src="/js/qualityindicators.js"></script>
-    <script src="/js/i18n.js"></script>
-    <script src="/js/highlight.pack.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/xwalk.js"></script>
+    <script src="./js/versions.js"></script>
+    <script src="./js/demos.js"></script>
+    <script src="./js/testimonials.js"></script>
+    <script src="./js/tools.js"></script>
+    <script src="./js/qualityindicators.js"></script>
+    <script src="./js/i18n.js"></script>
+    <script src="./js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script language="javascript" type="text/javascript">
       var style = document.createElement('style');
@@ -80,32 +80,32 @@
 
   <div class="doc-logo-div">
      <a href="/" class="doc-logo-link">
-       <img src="/assets/identity/crosswalkproject-logo-horizontal-dark.png" class="doc-logo-img">
+       <img src="./assets/identity/crosswalkproject-logo-horizontal-dark.png" class="doc-logo-img">
      </a>
   </div>
   <div class="doc-nav-div">
     <ul class="doc-nav-list">
       <li class="doc-nav-item">
-        <a href="/documentation/getting_started.html" class="doc-nav-link">Documentation</a>
+        <a href="./documentation/getting_started.html" class="doc-nav-link">Documentation</a>
       </li>
       <li class="doc-nav-item">
         <a href="/blog" class="doc-nav-link">Blog</a>
       </li>
       <li class="doc-nav-item hide-on-small">
-        <a href="/contribute" class="doc-nav-link">Contribute</a>
+        <a href="./contribute" class="doc-nav-link">Contribute</a>
       </li>
       <li class="doc-nav-item hide-on-small">
         <a href="https://github.com/crosswalk-project/crosswalk-website/wiki" class="doc-nav-link">Wiki</a>
       </li>
       <li class="doc-nav-item hide-on-small">
-        <a href="/documentation/about/faq.html" class="doc-nav-link">FAQ</a>
+        <a href="./documentation/about/faq.html" class="doc-nav-link">FAQ</a>
       </li>
       <li class="doc-nav-item">
 	<span class="i18n-label" id="i18n-label">
 	  <span id="i18n-inner">
-	    <img src="/assets/i18n-globe.png" class="i18n-globe" />
+	    <img src="./assets/i18n-globe.png" class="i18n-globe" />
 	    English
-	    <img src="/assets/i18n-arrow.png" class="i18n-arrow"/>
+	    <img src="./assets/i18n-arrow.png" class="i18n-arrow"/>
 	  </span>
 	  <div id="i18n-menu" class="i18n-menu i18n-menu-light">
             <a onclick="switchLanguage('English')">English</a>
@@ -137,7 +137,7 @@
     </span>
   </header>
   
-  <p>Crosswalk 15 has finally entered the Beta channel and is available from our <a href="/documentation/downloads.html">Downloads</a> page. This is quite a bit later than the scheduled date, for what we hope is a good reason: we wanted to keep the Android 4.0 support that was removed from Chromium 44, but it took longer than the time we usually allocate for rebasing. Rather than skipping one Chromium update, we decided to delay the release. Going forward, we plan to maintain the 4.0 support for as long as the effort is manageable, while returning to the usual 6-week release cadence.</p>
+  <p>Crosswalk 15 has finally entered the Beta channel and is available from our <a href="./documentation/downloads.html">Downloads</a> page. This is quite a bit later than the scheduled date, for what we hope is a good reason: we wanted to keep the Android 4.0 support that was removed from Chromium 44, but it took longer than the time we usually allocate for rebasing. Rather than skipping one Chromium update, we decided to delay the release. Going forward, we plan to maintain the 4.0 support for as long as the effort is manageable, while returning to the usual 6-week release cadence.</p>
 <p>Users of the <a href="https://github.com/crosswalk-project/cordova-plugin-crosswalk-webview">Crosswalk Cordova WebView plugin</a> should note that this version of Crosswalk doesn’t work with the 1.2.0 plugin currently <a href="https://www.npmjs.com/package/cordova-android-crosswalk">available from NPM</a>. In order to try it out you’ll need to install the plugin from the github repository until we make a new release to NPM, which should happen soon.</p>
 <p>Below are the major features of Crosswalk 15. As usual please report bugs and issues to our <a href="https://crosswalk-project.org/jira">Jira</a>. Happy hacking!</p>
 <h2>Chromium 44 and Android 4.0.x support</h2>
@@ -186,16 +186,16 @@
  
   <hr class="footer-divider" style="margin-top:125px; margin-bottom:0px" />
     <div style="position:relative; top:-30px;">
-       <a href="/"><img src="/assets/cw-logo-circle.png" width="60px" style="display:block; margin: 0 auto;" /></a>
+       <a href="/"><img src="./assets/cw-logo-circle.png" width="60px" style="display:block; margin: 0 auto;" /></a>
     </div>
     <footer class="footer footer--documentation" >
       <div class="container" >
         <div class="row">
           <div  class="footer-div" language="en">
-          <img src="/assets/Twitter_logo_blue.png" width="20px" /> Follow  <a href="http://twitter.com/xwalk_project">@xwalk_project on Twitter</a> for the latest developer activities and project updates.
+          <img src="./assets/Twitter_logo_blue.png" width="20px" /> Follow  <a href="http://twitter.com/xwalk_project">@xwalk_project on Twitter</a> for the latest developer activities and project updates.
           </div>
            <div  class="footer-div" language="zh" style="display:none">
-           <img src="/assets/Sina_Weibo_Blue.png" width="60px" /> 参考<a href="http://weibo.com/crosswalk">微博</a> 最新的开发者活动或者更新。
+           <img src="./assets/Sina_Weibo_Blue.png" width="60px" /> 参考<a href="http://weibo.com/crosswalk">微博</a> 最新的开发者活动或者更新。
           </div>
           <div class="footer-div">
              Latest blog post:</br>
@@ -207,12 +207,12 @@
               <br/>
            </div>
           <div class="footer-div">
-              <strong><a href="/feed.xml"><img src="/assets/rss-icon-16.gif" style="vertical-align:middle" /> RSS Feed</a></strong>
+              <strong><a href="/feed.xml"><img src="./assets/rss-icon-16.gif" style="vertical-align:middle" /> RSS Feed</a></strong>
           </div>
           <div class="footer-div">
-             <a href="/documentation/getting_started.html"> Documentation</a> &nbsp;
+             <a href="./documentation/getting_started.html"> Documentation</a> &nbsp;
              <a href="/blog"> Blog</a> &nbsp;
-             <a href="/documentation/downloads.html"> Downloads</a> <br />
+             <a href="./documentation/downloads.html"> Downloads</a> <br />
              <a href="https://crosswalk-project.org/jira/secure/Dashboard.jspa"> Issues</a> &nbsp;
              <a href="https://github.com/crosswalk-project"> GitHub Source</a> &nbsp;
              <a href="/sitemap.html">Sitemap</a> <br/>
@@ -242,8 +242,8 @@
       })(window,document,'script','dataLayer','GTM-WC843Q');</script>
       <!-- End Google Tag Manager -->
     
-    <script src="/js/smoothScroll.js"></script>
-    <script src="/js/vagueTime.js"></script>
-    <!-- <script async defer src="/js/trmix.js"></script> -->
+    <script src="./js/smoothScroll.js"></script>
+    <script src="./js/vagueTime.js"></script>
+    <!-- <script async defer src="./js/trmix.js"></script> -->
   </body>
 </html>

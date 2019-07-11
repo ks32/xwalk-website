@@ -21,7 +21,7 @@ var hoverImgSize = 150;
 var xmlhttp = null;
 var file_url;
 function onHomePageImgClick (event) {
-    window.open("/documentation/community/tools.html?tool=" + event.data.value, "_self");
+    window.open("./documentation/community/tools.html?tool=" + event.data.value, "_self");
 }
 
 function addToolImgEventHandlers(index) {
@@ -47,7 +47,7 @@ function createHtmlFromItem (item, pageType, itemWidth) {
         "<div class='tool-cube' id='cube" + item.index + "'>" + 
           (item.link ? "<a href='" + item.link + "'>" : "") + 
           "<img class='tool-img' id='appImg" + item.index + "'" + 
-            "src='../assets/tools/" + item.appImg + "'/>" + 
+            "src='./assets/tools/" + item.appImg + "'/>" + 
           (item.link ? "</a>" : "") + 
           "<div class='tool-text'>" + 
             "<div class='tool-label'>" + item.name + "</div>" +
@@ -60,7 +60,7 @@ function createHtmlFromItem (item, pageType, itemWidth) {
     } else if (pageType === HOME_PAGE) {
         content = 
         "<div class='tools-hp-cube' style='width:" + itemWidth + "%;' >" + 
-          "<a href='../documentation/community/tools.html?tool=" + item.index + "'>" + 
+          "<a href='/documentation/community/tools.html?tool=" + item.index + "'>" + 
             "<img class='tools-hp-img' id='hp-img" + item.index + "' src='assets/tools/" + item.appImg + "' />" + 
           "</a>" + 
           //"<div class='tools-hp-label'>" + item.name + "</div>" + 
@@ -102,9 +102,9 @@ function loadToolsFromFile(pageType, toolNum) {
     var cur_url = window.location.href;
     var url_list = cur_url.split("/");
     var flag = url_list[url_list.length - 1];
-    var load_url = "/documentation/community/tools.json";
+    var load_url = "./documentation/community/tools.json";
     if (flag.indexOf("_zh") >= 0) {
-      load_url = "/documentation/community/tools_zh.json";
+      load_url = "./documentation/community/tools_zh.json";
     }
     index = 0;
     $.getJSON(load_url, function( data ) {
